@@ -2,13 +2,14 @@
 	"geode": "4.2.0",
 	"gd": {
 		"win": "2.2074",
-		"android": "2.2074",
-		"mac": "2.2074",
-		"ios": "2.2074"
+		"android": "2.2074"
 	},
 	"id": "pololak.legacy-obj-dl",
 	"name": "Legacy OBJ & 3DL",
 	"version": "v1.0.0",
 	"developer": "Pololak",
-	"description": "Brings back OBJ & 3DL to the level settings."
+	"description": "Brings back OBJ & 3DL to the level settings.",
+	"links": {
+		"source": "https://github.com/Pololak/OBJ-and-3DL-in-Level-Settings"
+	}
 }
