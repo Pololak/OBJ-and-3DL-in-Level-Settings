@@ -23,7 +23,7 @@ class $modify(IDKLEVELSETTINGSLAYER, LevelSettingsLayer) {
 		LevelSettingsLayer::onLiveEdit(sender);
 	}
 
-	void colorSelectClosed(CCNode* p0) {
+	void updateColorSprites() {
 		if (this->m_buttonMenu) {
 			for (auto child : CCArrayExt<CCMenuItemSpriteExtra*>(this->m_buttonMenu->getChildren())) {
 				if (auto spr = static_cast<ColorChannelSprite*>(child->getChildByID("objChannel_colorSpr"_spr))) {
@@ -33,8 +33,8 @@ class $modify(IDKLEVELSETTINGSLAYER, LevelSettingsLayer) {
 					this->updateSprite(spr);
 				}
 			}
-		}
-		LevelSettingsLayer::colorSelectClosed(p0);
+		} 
+		LevelSettingsLayer::updateColorSprites();
 	}
 
 	bool init(LevelSettingsObject* settingsObject, LevelEditorLayer* editorLayer) {
