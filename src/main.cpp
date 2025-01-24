@@ -15,14 +15,6 @@ class $modify(IDKLEVELSETTINGSLAYER, LevelSettingsLayer) {
 		sprite->updateValues(action);
 	}
 
-	void onShowPicker(CCObject* sender) {
-		LevelSettingsLayer::onShowPicker(sender);
-	}
-
-	void onLiveEdit(CCObject* sender) {
-		LevelSettingsLayer::onLiveEdit(sender);
-	}
-
 	void updateColorSprites() {
 		if (this->m_buttonMenu) {
 			for (auto child : CCArrayExt<CCMenuItemSpriteExtra*>(this->m_buttonMenu->getChildren())) {
@@ -69,12 +61,12 @@ class $modify(IDKLEVELSETTINGSLAYER, LevelSettingsLayer) {
 		auto objSprite = ColorChannelSprite::create();
 		objSprite->setID("objChannel_colorSpr"_spr);
 		objSprite->setScale(0.45f);
-		auto objButton = CCMenuItemSpriteExtra::create(objSprite, this, menu_selector(IDKLEVELSETTINGSLAYER::onShowPicker));
+		auto objButton = CCMenuItemSpriteExtra::create(objSprite, this, menu_selector(LevelSettingsLayer::onShowPicker));
 		objButton->setTag(1004);
 		objSprite->setTag(1004);
 		objButton->setPosition({92.f, 128.f});
 		menu->addChild(objButton);
-		auto objLiveButton = CCMenuItemSpriteExtra::create(plusSpr, this, menu_selector(IDKLEVELSETTINGSLAYER::onLiveEdit));
+		auto objLiveButton = CCMenuItemSpriteExtra::create(plusSpr, this, menu_selector(LevelSettingsLayer::onLiveEdit));
 		objLiveButton->setPosition({110.f, 142.f});
 		objLiveButton->setTag(1004);
 		menu->addChild(objLiveButton);
@@ -82,12 +74,12 @@ class $modify(IDKLEVELSETTINGSLAYER, LevelSettingsLayer) {
 		auto dlSprite = ColorChannelSprite::create();
 		dlSprite->setID("dlChannel_colorSpr"_spr);
 		dlSprite->setScale(0.45f);
-		auto dlButton = CCMenuItemSpriteExtra::create(dlSprite, this, menu_selector(IDKLEVELSETTINGSLAYER::onShowPicker));
+		auto dlButton = CCMenuItemSpriteExtra::create(dlSprite, this, menu_selector(LevelSettingsLayer::onShowPicker));
 		dlButton->setTag(1003);
-		dlButton->setTag(1003);
+		dlSprite->setTag(1003);
 		dlButton->setPosition({138.f, 128.f});
 		menu->addChild(dlButton);
-		auto dlLiveButton = CCMenuItemSpriteExtra::create(plusSpr, this, menu_selector(IDKLEVELSETTINGSLAYER::onLiveEdit));
+		auto dlLiveButton = CCMenuItemSpriteExtra::create(plusSpr, this, menu_selector(LevelSettingsLayer::onLiveEdit));
 		dlLiveButton->setPosition({158.f, 142.f});
 		dlLiveButton->setTag(1003);
 		menu->addChild(dlLiveButton);
