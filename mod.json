@@ -9,6 +9,7 @@
 	"version": "v1.0.0",
 	"developer": "Pololak",
 	"description": "Brings back OBJ & 3DL to the level settings.",
+	"tags": ["editor"],
 	"links": {
 		"source": "https://github.com/Pololak/OBJ-and-3DL-in-Level-Settings"
 	}
