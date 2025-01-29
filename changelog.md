@@ -1,3 +1,6 @@
+# 1.0.3
+- Fixed buttons appearing on startpos settings.
+
 # 1.0.2
 - MacOS.
 
