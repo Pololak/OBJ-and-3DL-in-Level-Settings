@@ -1,3 +1,6 @@
+# 1.0.4
+- Update to GD 2.2081.
+
 # 1.0.3
 - Fixed buttons appearing on startpos settings.
 
